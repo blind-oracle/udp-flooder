@@ -87,7 +87,7 @@ func main() {
 		log.Fatalf("Unable to read payload: %s", err)
 	}
 
-	log.Printf("Starting %d threads, sending %d packets from each thread to %s", Threads, Count, Dst)
+	log.Printf("Starting %d threads, sending %d packets from each thread to %s, packet interval %s", Threads, Count, Dst, Delay)
 
 	for i := 0; i < Threads; i++ {
 		wg.Add(1)
